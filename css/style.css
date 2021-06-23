@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body img {
+  max-width: 100%;
+}
+
+.app {
+  position: relative;
+}
+
+.app__head {
+  height: 37.5vh;
+  position: relative;
+  text-align: center;
+  padding-inline: 3rem;
+  background-image: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app__map {
+  height: 62.5vh;
+  z-index: 1;
+  background-color: #fff;
+  position: relative;
+}
+
+.app__title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 2rem;
+}
+
+.app__input {
+  margin-inline: auto;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #fff;
+  border-radius: 1.1rem;
+  overflow: hidden;
+}
+
+.app__input--text, .app__input--submit {
+  padding: 1.5rem 2.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: none;
+  outline: none;
+}
+
+.app__input--text {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  color: #2b2b2b;
+  font-size: 1.8rem;
+}
+
+.app__input--text::-webkit-input-placeholder {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #969696;
+  font-weight: 400;
+}
+
+.app__input--text:-ms-input-placeholder {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #969696;
+  font-weight: 400;
+}
+
+.app__input--text::-ms-input-placeholder {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #969696;
+  font-weight: 400;
+}
+
+.app__input--text::placeholder {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #969696;
+  font-weight: 400;
+}
+
+.app__input--submit {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 7rem;
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.details {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: calc(100% - 6rem);
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  border-radius: 1.1rem;
+  -webkit-box-shadow: 0 3px 10px #777;
+          box-shadow: 0 3px 10px #777;
+}
+
+.details__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.details__title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #969696;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.details__value {
+  font-size: 1.8rem;
+  color: #2b2b2b;
+  font-weight: 500;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 3000;
+  background-color: #ebe2e2;
+  border-radius: 20px;
+  color: #2b2b2b;
+  padding: 1rem 1.5rem;
+}
+
+.attribution a {
+  font-family: inherit;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 700px) {
+  .details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .attribution {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .details__item {
+    padding: 3rem;
+    text-align: left;
+  }
+  .details__item:not(:last-child) {
+    margin-bottom: 0;
+    border-right: 1px solid #969696;
+  }
+}
+
+.popup .leaflet-popup-content-wrapper {
+  border: none;
+  border-left: 4px solid #2b2b2b;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #2b2b2b;
+}
+/*# sourceMappingURL=style.css.map */

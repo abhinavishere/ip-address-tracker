@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | IP Address Tracker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/b6c975b9d9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./app.js"></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <header class="app">
+      <!-- App head -->
+      <section class="app__head">
+        <!-- Title -->
+        <h1 class="app__title">IP Address Tracker</h1>
+
+        <!-- IP input form -->
+        <form class="app__input">
+          <input
+            type="text"
+            name="ip-address"
+            id="ip_address"
+            class="app__input--text"
+            placeholder="Search for any IP or Domain"
+            required
+          />
+          <button class="app__input--submit">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </form>
+
+        <!-- Details Article -->
+        <article class="details">
+          <div class="details__item">
+            <p class="details__title">ip address</p>
+            <p class="details__value ip-address">--</p>
+          </div>
+          <div class="details__item">
+            <p class="details__title">location</p>
+            <p class="details__value ip-location">--</p>
+          </div>
+          <div class="details__item">
+            <p class="details__title">timezone</p>
+            <p class="details__value timezone">--</p>
+          </div>
+          <div class="details__item">
+            <p class="details__title">isp</p>
+            <p class="details__value isp">--</p>
+          </div>
+        </article>
+      </section>
+      <div class="app__map" id="map"></div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.linkedin.com/in/abhinav-sawarkar-890a15144/"
+          >Abhinav Sawarkar</a
+        >.
+      </div>
+    </header>
+  </body>
+</html>
+
+<!-- 9637596570 10.32 -->
